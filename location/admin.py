@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from country.models import Country, County, SubCounty
+from location.models import Country, County, SubCounty
 
 # Register your models here.
 admin.site.register(Country)
