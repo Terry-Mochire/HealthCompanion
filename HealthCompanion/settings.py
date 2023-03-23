@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "country.apps.CountryConfig",
+    "location.apps.CountryConfig",
     "clinic.apps.ClinicConfig",
     "service.apps.ServiceConfig",
 ]
