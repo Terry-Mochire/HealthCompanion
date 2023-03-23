@@ -25,8 +25,6 @@ def about_us(request):
     return render(request, 'about_us.html')
 
 
-def our_services(request):
-    return render(request, 'our_services.html')
 
 def search_by_name(request):
     if request.method == 'POST':

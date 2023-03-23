@@ -1,6 +1,6 @@
 from django.db import models
 
-from country.models import Country, County, SubCounty
+from location.models import Country, County, SubCounty
 from service.models import Service
 
 
