@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}About Us{% endblock %}
+{% block content %}
+    <div>
+        {% load static %}
+        <img src="{% static 'clinic/images/office.jpeg' %}" alt="About Us" style="width: 100%; height: 45vh">
+    </div>
+    <div class="row" style="background-color: #fff1db; padding: 100px 20px" >
+        <div class="col-md-3" style="border-right: 1px solid gray; display: flex; flex-direction: column; align-items: center">
+            {% load static %}
+            <img src="{% static 'clinic/images/vision.jpeg' %}" alt="Vision" style="">
+            <h4 style="text-align: center">Our Vision: </h4>
+            <p style="text-align: center">To champion Affordable and Accessible healthcare in Africa</p>
+        </div>
+        <div class="col-md-3" style="border-right: 1px solid gray; display: flex; flex-direction: column; align-items: center">
+            {% load static %}
+            <img src="{% static 'clinic/images/mission.jpeg' %}" alt="Vision">
+            <h4>Our Mission: </h4>
+            <p style="text-align: center">We provide access to inclusive Quality Healthcare to enable our people lead productive lives</p>
+        </div>
+        <div class="col-md-3" style="border-right: 1px solid gray; display: flex; flex-direction: column; align-items: center">
+            <h4>Our Core Values: </h4>
+            <ul style="list-style-type: none;">
+                <li style="margin: 10px; font-size: 20px" ><span style="font-weight: bold">C -</span> Caring</li>
+                <li style="margin: 10px; font-size: 20px" ><span style="font-weight: bold">H -</span> Honesty and Trust</li>
+                <li style="margin: 10px; font-size: 20px" ><span style="font-weight: bold">A -</span> Accountability</li>
+                <li style="margin: 10px; font-size: 20px" ><span style="font-weight: bold">M -</span> Mutual Respect</li>
+                <li style="margin: 10px; font-size: 20px" ><span style="font-weight: bold">P -</span> Professional Ethics</li>
+                <li style="margin: 10px; font-size: 20px" ><span style="font-weight: bold">I -</span> Integrity</li>
+                <li style="margin: 10px; font-size: 20px" ><span style="font-weight: bold">O -</span> Optimum Quality</li>
+                <li style="margin: 10px; font-size: 20px" ><span style="font-weight: bold">N -</span> Non-Maleficence(Do No Harm)</li>
+            </ul>
+        </div>
+        <div class="col-md-3" style="display: flex; flex-direction: column; align-items: center">
+            <h4>Our Approach: </h4>
+            <p style="text-align: center">Equity Afia is a sustainable, integrated health model that is using franchising principles to train and monitor a network of Medical-Entrepreneurs to provide standardized, quality and affordable healthcare services throughout Kenya. Equity Afia plans to provide comprehensive outpatient services through an estimated 300 outpatient health facilities over the next few years. Our main goal is to ensure sustained improvement of the health and well-being of Kenyans by increasing access to and utilization of quality, affordable and standardized healthcare.</p>
+        </div>
+    </div>
+    <div style="background-color: #dfdfdf; text-align: center; padding: 70px">
+    <h1 style="color: #9a381f; font-weight: bold">Who we are</h1>
+    <p style="font-size: 20px">We are a group of qualified and experienced doctors who have come together as a network of medical entrepreneurs with the aim of providing high quality, affordable and accessible healthcare to the majority of Kenyans. Meet our able team on ground to serve you.</p>
+    <h4>Meet our able team on ground to serve you.</h4>
+    </div>
+{% endblock %}

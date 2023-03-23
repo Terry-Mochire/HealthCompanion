@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Clinics{% endblock %}
+{% block content %}
+    <h1>ALL CLINICS</h1>
+    <nav class="navbar navbar-light bg-light">
+  <form class="form-inline" method="post" action="{% url 'search_by_name' %} ">
+      {% csrf_token %}
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search_text">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
+  </form>
+</nav>
+    <ul>
+        {% if clinics %}
+            {% for clinic in clinics %}
+                <li><a href="{% url 'clinic_detail' clinic.id %} ">{{ clinic.name }}</a></li>
+            {% endfor %}
+        {% else %}
+            <p>No clinics found</p>
+    {% endif %}
+    </ul>
+{% endblock %}
