@@ -25,7 +25,6 @@ def about_us(request):
     return render(request, 'about_us.html')
 
 
-
 def search_by_name(request):
     if request.method == 'POST':
         search_text = request.POST['search_text']
