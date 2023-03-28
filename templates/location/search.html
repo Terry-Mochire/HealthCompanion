@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Search Location{% endblock %}
+{% block content %}
+    <form action="{% url 'search' %}" method="post">
+        {% csrf_token %}
+        <div class="col-md-4">
+            <label for="country" class="form-label">Country</label>
+            <select id="country" class="form-select" name="country">
+                <option value="">---------</option>
+                {% for country in countries %}
+                    <option value="{{ country.id }}">{{ country.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label for="county" class="form-label">County</label>
+            <select id="county" class="form-select" name="county">
+                <option value="">---------</option>
+                {% for county in counties %}
+                    <option value="{{ county.id }}">{{ county.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label for="sub_county" class="form-label">Sub-County</label>
+            <select id="sub_county" class="form-select" name="sub_county">
+                <option value="">---------</option>
+                {% for sub_county in sub_counties %}
+                    <option value="{{ sub_county.id }}">{{ sub_county.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}
