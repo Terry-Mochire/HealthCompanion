@@ -18,7 +18,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ service.name }}</h5>
                                 <p class="card-text"> {{ service.description | truncatewords:50 }} </p>
-                                <a href="{% url 'search_clinics_with_service' service.name %}" class="btn btn-primary">Find Service</a>
+                                <a href="{% url 'search_clinics_with_service' service.name %}" class="btn btn-info">Find Service</a>
                             </div>
                         </div>
                     </div>
