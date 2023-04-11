@@ -1,8 +1,6 @@
 from django.core.serializers import serialize
 from django.http import JsonResponse, HttpResponse
 from django.middleware.csrf import get_token
-from django.shortcuts import render
-from django.views import generic
 
 from .models import Clinic
 
@@ -17,7 +15,8 @@ def clinics(request):
 
 def clinic_detail(request, pk):
     clinic = Clinic.objects.get(pk=pk)
-    data = serialize('json', [clinic], fields=('name', 'country', 'county', 'sub_county', 'telephone', 'email', 'doctor_in_charge', 'list_of_services'))
+    data = serialize('json', [clinic], fields=(
+    'name', 'country', 'county', 'sub_county', 'telephone', 'email', 'doctor_in_charge', 'list_of_services'))
     return HttpResponse(data, content_type="application/json")
 
 
