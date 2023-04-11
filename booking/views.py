@@ -2,7 +2,7 @@ import json
 from datetime import datetime, timedelta
 
 from django.core.serializers import serialize
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect
 
 from booking.models import FirebaseUser, Appointment
@@ -156,17 +156,17 @@ def booking_submit(request, user_id):
                             appointment.day = day
                             appointment.time = time
                             appointment.save()
-                            return HttpResponse("Appointment booked successfully")
+                            return JsonResponse({"message": "Appointment booked successfully"})
                         else:
-                            return HttpResponse("Selected time is not available")
+                            return JsonResponse({"message": "Selected time is not available"})
                     else:
-                        return HttpResponse("Selected day is not available")
+                        return JsonResponse({"message": "Selected day is not available"})
                 else:
-                    return HttpResponse("Selected day is not a weekday")
+                    return JsonResponse({"message": "Selected day is not a weekday"})
             else:
-                return HttpResponse("Selected day is not valid")
+                return JsonResponse({"message": "Selected day is not valid"})
         else:
-            return HttpResponse("Please select a service and a clinic")
+            return JsonResponse({"message": "Please select a service and a clinic"})
 
     return HttpResponse(json_response, content_type="application/json")
 
